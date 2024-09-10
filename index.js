@@ -26,7 +26,7 @@ posts = [
       id: uuidv4(),
       username: "rohitshukla",
       content: "I’m thrilled to share that I got selected for my first internship! 🎉 It’s been a long journey of applying, preparing, and interviewing, and finally, my hard work has paid off. I’m looking forward to gaining practical experience and learning from professionals in my field. For those who have already been through internships, what advice would you give to make the most of this opportunity?"
-  }
+  },
   {
       id: uuidv4(),
       username: "sneharoy",
