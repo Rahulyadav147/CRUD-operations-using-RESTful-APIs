@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a New Post</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-md border border-gray-300">
+        <h1 class="text-4xl font-bold text-gray-900 mb-6">Create a New Post</h1>
+
+        <form method="post" action="/posts">
+            <!-- Input field for username -->
+            <div class="mb-4">
+                <label for="username" class="block text-gray-700 font-semibold mb-2">Username:</label>
+                <input 
+                    type="text" 
+                    id="username" 
+                    name="username" 
+                    placeholder="Enter your username" 
+                    required 
+                    class="w-full border border-gray-300 p-3 rounded-lg focus:border-blue-500 focus:outline-none"
+                />
+            </div>
+
+            <!-- Text area for post content -->
+            <div class="mb-6">
+                <label for="content" class="block text-gray-700 font-semibold mb-2">Your Post:</label>
+                <textarea 
+                    id="content" 
+                    name="content" 
+                    placeholder="Write your post here..." 
+                    required 
+                    class="w-full border border-gray-300 p-3 rounded-lg resize-none focus:border-blue-500 focus:outline-none"
+                ></textarea>
+            </div>
+
+            <!-- Submit button -->
+            <button 
+                type="submit" 
+                class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300"
+            >
+                Submit Post
+            </button>
+        </form>
+    </div>
+</body>
+</html>

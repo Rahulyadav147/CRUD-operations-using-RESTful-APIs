@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Posts</title>
+  <!-- Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-200 p-8">
+  <div class="max-w-3xl mx-auto">
+    <h1 class="text-4xl font-bold text-center text-gray-900 mb-10">Manage Posts</h1>
+    
+    <!-- Loop through each post -->
+    <% for (post of posts) { %>
+      <div class="post bg-white shadow-lg rounded-lg p-6 mb-8 border border-gray-300">
+        <div class="flex items-center mb-4">
+          <h3 class="text-2xl font-semibold text-blue-700">@<%= post.username %></h3>
+        </div>
+        <p class="text-gray-800 text-lg mb-4"><%= post.content %></p>
+        
+        <div class="flex gap-4 mt-4 items-center">
+          <a href="http://localhost:3001/posts/<%= post.id %>" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+            See Details
+          </a>
+          <a href="http://localhost:3001/posts/<%= post.id %>/edit" class="bg-yellow-600 text-white px-6 py-2 rounded-lg hover:bg-yellow-700 transition duration-300">
+            Edit
+          </a>
+          <form method="post" action="/posts/<%= post.id %>?_method=DELETE" class="flex-grow">
+            <button type="submit" class="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition duration-300">
+              Delete
+            </button>
+          </form>
+        </div>
+      </div>
+    <% } %> 
+    
+    <!-- Create New Post Button -->
+    <div class="text-center mt-12">
+      <a href="http://localhost:3001/posts/new" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition duration-300">
+        Create New Post
+      </a>
+    </div>
+  </div>
+</body>
+</html>

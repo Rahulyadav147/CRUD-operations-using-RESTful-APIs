@@ -1,0 +1,18 @@
+body{
+  background-color: darkslategray;
+}
+h1 {
+    color: maroon;
+  }
+  
+  .post {
+    background-color: blanchedalmond;
+    padding: 15px; /* Optional for better spacing */
+    margin-bottom: 10px; /* Optional for spacing between posts */
+    border-radius: 5px; /* Optional for rounded corners */
+  }
+  
+  .user {
+    font-style: italic;
+  }
+  
