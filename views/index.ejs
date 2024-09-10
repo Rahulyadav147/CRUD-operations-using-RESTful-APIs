@@ -20,10 +20,10 @@
         <p class="text-gray-800 text-lg mb-4"><%= post.content %></p>
         
         <div class="flex gap-4 mt-4 items-center">
-          <a href="http://localhost:3001/posts/<%= post.id %>" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+          <a href="/posts/<%= post.id %>" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
             See Details
           </a>
-          <a href="http://localhost:3001/posts/<%= post.id %>/edit" class="bg-yellow-600 text-white px-6 py-2 rounded-lg hover:bg-yellow-700 transition duration-300">
+          <a href="/posts/<%= post.id %>/edit" class="bg-yellow-600 text-white px-6 py-2 rounded-lg hover:bg-yellow-700 transition duration-300">
             Edit
           </a>
           <form method="post" action="/posts/<%= post.id %>?_method=DELETE" class="flex-grow">
@@ -37,7 +37,7 @@
     
     <!-- Create New Post Button -->
     <div class="text-center mt-12">
-      <a href="http://localhost:3001/posts/new" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition duration-300">
+      <a href="/posts/new" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition duration-300">
         Create New Post
       </a>
     </div>

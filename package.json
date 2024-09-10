@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -14,5 +15,8 @@
     "express": "^4.19.2",
     "method-override": "^3.0.0",
     "uuid": "^10.0.0"
+  },
+  "engines": {
+    "node": ">=14.x"
   }
 }
